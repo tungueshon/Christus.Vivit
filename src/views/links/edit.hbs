@@ -1,0 +1,27 @@
+<div class="col-md-8 mx-auto">
+
+    <div class="card">
+        <div class="card-body">
+            <form action="/links/edit/{{link.id}}" method="POST">
+                <div class="form-group">
+                    <input type="text" name="titulo" class="form-control" placeholder="Titulo" value="{{link.titulo}}" autofocus>
+                </div>
+
+                <div class="form-group">
+                    <textarea name="contenido" rows="10" class="form-control" placeholder="Contenido">{{{link.contenido}}}</textarea>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-success btn-block">
+                        Guardar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+ <script src="https://cdn.ckeditor.com/4.12.1/standard/ckeditor.js"></script>
+
+				  <script>
+						 CKEDITOR.replace( 'contenido' );
+						 
+					  </script>

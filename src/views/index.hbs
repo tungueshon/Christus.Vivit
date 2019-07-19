@@ -1,0 +1,62 @@
+
+<html>
+<body>
+<main class="index">
+<header class="masthead d-flex">
+
+<div class="container ">
+    
+    <div class="row">
+        {{#each links}}
+        <div class=" col-md-4 borde0">
+            <div class="card text-center">
+                <div class="card-body">
+                    <a href="/links/ver/{{id}}" target="_self">
+                        <h3 class="card-title text-uppercase">
+                            {{titulo}}
+                        </h3>
+                    </a>
+                    <p class="m-2">{{{contenido}}}</p>
+                    <p class="text-muted">
+                        {{timeago created_at}}
+                    </p>
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>No hay ningun articulo disponible Inicia sesion y crea uno</p>
+                <a href="/profile">Iniciar Sesion</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+    </header>
+    
+</main>
+</body>
+</html>
+
+<!-- Bootstrap core JavaScript -->
+<script src="/vendor/jquery/jquery.min.js"></script>
+<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+       setTimeout(function () {
+           $('.alert').slideUp(1000);
+       },1000);
+    });
+</script>
+</body>
+
+</html>
+
+<script>
+  
+$('#myCarousel').on('slide.bs.carousel', function () {
+  // do something…
+})
+</script>
